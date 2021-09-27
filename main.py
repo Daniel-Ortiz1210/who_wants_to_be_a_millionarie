@@ -57,3 +57,9 @@ extra_questions = {
     2: '¿Cuál es el país más poblado en la tierra?',
     3: '¿Qué área de la biología estudia a los animales?'
 }
+
+extra_answers = {
+    1: ['A', 'a) Sigmund Freud b) Noam Chumski\nc) Abraham Maslow d) William James', 'a) Sigmund Freud b) Noam Chumsky'],
+    2: ['B', 'a) Estados Unidos b) China\nc) Malasia d) Japón', 'a) Estados Unidos b) China'],
+    3: ['A', 'a) Zoología d) Anatomía\nc) Morfología d) Eligotomía', 'a) Zoología c) Morfología']
+}
