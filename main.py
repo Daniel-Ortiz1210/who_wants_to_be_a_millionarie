@@ -97,3 +97,7 @@ def evaluate_answer(answer, n):
     if final_answer == '*':
         if answer == answers[n][0]:
             return True
+
+def incorrect_answer(bucket):
+    print('Respuesta incorrecta!')
+    print('Has conseguido ${} dólares.'.format(bucket))
