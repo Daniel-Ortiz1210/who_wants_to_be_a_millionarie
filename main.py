@@ -101,3 +101,45 @@ def evaluate_answer(answer, n):
 def incorrect_answer(bucket):
     print('Respuesta incorrecta!')
     print('Has conseguido ${} dólares.'.format(bucket))
+
+def instructions():
+    print('''
+    WHO WANTS TO BE A MILLIONAIRE?
+    ------------------------------
+
+    ¡Bienvenido al juego dónde puedes hacerte rico con 15 pregutnas!
+    
+    Estas son las reglas:
+    
+    * Cada pregunta vale cierta cantidad de dinero mientras avanzas (véase en la tabla de premios).
+    * Cada pregunta es de opción múltiple, hay 4 respuestas posibles.
+    * Si no conoces una respuesta, tendrás la oportunidad de contestar una pregunta extra de menor dificultad
+      pero si la fallas, termina el juego y te retiras con la cantidad de dinero que has ganado.
+    * Tienes 3 preguntas extra disponibles.
+    * Tienes la oportunidad de usar un comodín 50:50 que eliminará dos respuestas incorrectas del tablero al esbribir lo siguiente: 50:50.
+    * En las respuestas extra no puedes usar el comodín 50:50 para evitar un desbalance.
+    * Al llegar a la pregunta número 15, no podrás usar ni comodines 50:50 ni preguntas extra.
+      Si no respondes correctamente, te retirarás con el dinero equivalente de la pregunta número 10.
+        
+        Esta es la tabla de premios:
+
+        Pregunta     Premio
+        ******************************
+        * 1 ---------> 100 USD       *
+        * 2 ---------> 200 USD       *
+        * 3 ---------> 300 USD       *      
+        * 4 ---------> 500 USD       *
+        * 5 ---------> 1,000 USD     * 
+        * 6 ---------> 2,000 USD     * 
+        * 7 ---------> 4,000 USD     * 
+        * 8 ---------> 8,000 USD     *
+        * 9 ---------> 16,000 USD    *
+        * 10 --------> 32,000 USD    *
+        * 11 --------> 64,000 USD    *
+        * 12 --------> 125,000 USD   *
+        * 13 --------> 250,000 USD   *   
+        * 14 --------> 500,000 USD   *
+        * 15 --------> 1,000,000 USD *
+        ******************************
+    ''')
+    input('Presiona * para comenzar: ')
