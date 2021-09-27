@@ -152,3 +152,31 @@ def instructions():
         ******************************
     ''')
     input('Presiona * para comenzar: ')
+
+def main(questions, scoring, answers, extra_questions, extra_answers):
+    bucket = 0
+    extra_question_number = 0
+    fifty_fifty = 1
+    for n in questions:
+        if n == 15:
+            print('\n------------------------------')
+            print('Has llegado a la pregunta {}. Si te equivocas en esta pregunta, te retirarás con el dinero que conseguiste en la pregunta número 10.\nTampoco hay preguntas extra ni comodines 50:50'.format(n))
+            print_questions(n)
+            if evaluate_answer(capture_answer(n), n):
+                bucket = scoring_money(bucket, scoring, n)
+                print('¡FELICIDADES! ¡ACABAS DE GANAR ${} DÓLARES! El juego ha terminado.'.format(bucket))
+                break
+            else:
+                print('La respuesta fue incorrecta. Te retiras con ${} dólares.'.format(scoring[10]))
+                break
+        print('\n------------------------------')
+        print('Tienes {} comodín(es) 50:50 disponible(s)'.format(fifty_fifty))
+        print_questions(n)
+        answer = capture_answer(n)
+        if answer == '50:50':
+            fifty_fifty = fifty_fifty_function(n, fifty_fifty)
+            answer = capture_answer(n)
+        if evaluate_answer(answer, n):
+            bucket = scoring_money(bucket, scoring, n)
+        else:
+            pass
