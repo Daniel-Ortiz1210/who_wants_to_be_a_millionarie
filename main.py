@@ -111,6 +111,16 @@ def scoring_money(bucket, scoring, n):
         print('Correcto! Ahora tienes ${} dólares en total. Avanzas a la siguiente pregunta.'.format(bucket))
         return bucket
 
+def extra_question(extra_questions, extra_answers, extra_question_number):
+    print('--PREGUNTA EXTRA {}--'.format(extra_question_number))
+    print(extra_questions[extra_question_number])
+    print(extra_answers[extra_question_number][1])
+    extra_answer = input('Escribe tu respuesta aquí: ').upper()
+    final_answer = input('Escribe * para confirmar tu respuesta final: ')
+    if final_answer == '*':
+        if extra_answer == extra_answers[extra_question_number][0]:
+            return True
+
 def instructions():
     print('''
     WHO WANTS TO BE A MILLIONAIRE?
@@ -179,4 +189,32 @@ def main(questions, scoring, answers, extra_questions, extra_answers):
         if evaluate_answer(answer, n):
             bucket = scoring_money(bucket, scoring, n)
         else:
-            pass
+            
+            extra_question_number += 1
+            print('Respuesta incorrecta!')
+            print('\n------------------------------')
+            if extra_question_number == 1:
+                if extra_question(extra_questions, extra_answers, extra_question_number):
+                    bucket = scoring_money(bucket, scoring, n)
+                    continue
+                else:
+                    incorrect_answer(bucket)
+                    break
+            elif extra_question_number == 2:
+                if extra_question(extra_questions, extra_answers, extra_question_number):
+                    bucket = scoring_money(bucket, scoring, n)
+                    continue
+                else:
+                    incorrect_answer(bucket)
+                    break  
+            elif extra_question_number == 3:
+                if extra_question(extra_questions, extra_answers, extra_question_number):
+                    bucket = scoring_money(bucket, scoring, n)
+                    continue
+                else:
+                    incorrect_answer(bucket)
+                    break
+            else:
+                print('Se te acabaron las preguntas extra! El juego terminó.')
+                print('Te retiras con ${} dólares!'.format(bucket))
+                break
