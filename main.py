@@ -91,3 +91,9 @@ def fifty_fifty_function(n, fifty_fifty):
         print('Ya no tienes comodines 50:50!')
         fifty_fifty = 0
         return fifty_fifty
+
+def evaluate_answer(answer, n):
+    final_answer = input('Escribe * para confirmar tu respuesta final: ').upper()
+    if final_answer == '*':
+        if answer == answers[n][0]:
+            return True
