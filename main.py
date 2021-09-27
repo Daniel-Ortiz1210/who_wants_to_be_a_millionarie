@@ -68,3 +68,14 @@ def print_questions(n):
     print('PREGUNTA NÚMERO', n)
     print(questions[n])
     print(answers[n][1])
+
+def capture_answer(n):
+    answer = input('Escribe tu respuesta: ').upper() 
+    if answer == 'A' or answer == 'B' or answer == 'C' or answer == 'D' or answer == '50:50':
+        return answer
+    else:
+        while answer != 'A' or answer != 'B' or answer != 'C' or answer != 'D' or answer != '50:50':
+            answer = input('Escribe una pregunta válida (A, B, C, D o 50:50): ').upper()
+            if answer == 'A' or answer == 'B' or answer == 'C' or answer == 'D' or answer == '50:50':
+                return answer
+                break
