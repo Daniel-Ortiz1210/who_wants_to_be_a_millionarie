@@ -51,3 +51,9 @@ scoring = {
     14: '500,000',
     15: '1,000,000'
 }
+
+extra_questions = {
+    1: 'Quién es el padre del psicoanálisis?',
+    2: '¿Cuál es el país más poblado en la tierra?',
+    3: '¿Qué área de la biología estudia a los animales?'
+}
