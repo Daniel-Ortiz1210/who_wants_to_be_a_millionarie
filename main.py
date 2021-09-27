@@ -79,3 +79,15 @@ def capture_answer(n):
             if answer == 'A' or answer == 'B' or answer == 'C' or answer == 'D' or answer == '50:50':
                 return answer
                 break
+
+def fifty_fifty_function(n, fifty_fifty):
+    if fifty_fifty == 1:
+        print('-----------COMODÍN 50:50--------------')
+        print(questions[n])
+        print(answers[n][2])
+        fifty_fifty -= 1
+        return fifty_fifty
+    else:
+        print('Ya no tienes comodines 50:50!')
+        fifty_fifty = 0
+        return fifty_fifty
