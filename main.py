@@ -33,3 +33,21 @@ answers = {
     14: ['D', 'a) Bruno Mars b) Freddie Mercury\nc) Michael Jackson d) Bruce Springsteen', 'a) Bruno Mars d) Bruce Springsteen'],
     15: ['B', 'a) Polvo lunar b) Antimateria\nc) Oro d) Uranio', 'a) Polvo lunar b) Antimateria']
 }
+
+scoring = {
+    1: '100',
+    2: '200',
+    3: '300',
+    4: '500',
+    5: '1,000',
+    6: '2,000',
+    7: '4,000',
+    8: '8,000',
+    9: '16,000',
+    10: '32,000',
+    11: '64,000',
+    12: '125,000',
+    13: '250,000',
+    14: '500,000',
+    15: '1,000,000'
+}
