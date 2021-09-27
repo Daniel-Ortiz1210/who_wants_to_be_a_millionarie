@@ -102,6 +102,15 @@ def incorrect_answer(bucket):
     print('Respuesta incorrecta!')
     print('Has conseguido ${} dólares.'.format(bucket))
 
+def scoring_money(bucket, scoring, n):
+    if n == 15:
+        bucket = scoring[n]
+        return bucket
+    else:
+        bucket = scoring[n]
+        print('Correcto! Ahora tienes ${} dólares en total. Avanzas a la siguiente pregunta.'.format(bucket))
+        return bucket
+
 def instructions():
     print('''
     WHO WANTS TO BE A MILLIONAIRE?
