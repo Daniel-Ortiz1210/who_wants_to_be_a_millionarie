@@ -222,3 +222,6 @@ def main(questions, scoring, answers, extra_questions, extra_answers):
                 print('Se te acabaron las preguntas extra! El juego terminó.')
                 print('Te retiras con ${} dólares!'.format(bucket))
                 break
+
+instructions()
+main(questions, scoring, answers, extra_questions, extra_answers)
