@@ -63,3 +63,8 @@ extra_answers = {
     2: ['B', 'a) Estados Unidos b) China\nc) Malasia d) Japón', 'a) Estados Unidos b) China'],
     3: ['A', 'a) Zoología d) Anatomía\nc) Morfología d) Eligotomía', 'a) Zoología c) Morfología']
 }
+
+def print_questions(n):
+    print('PREGUNTA NÚMERO', n)
+    print(questions[n])
+    print(answers[n][1])
